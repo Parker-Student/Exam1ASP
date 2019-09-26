@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PF.Exam1
 {
-    public partial class Form1 : Form
+    public partial class Exam1 : Form
     {
-        public Form1()
+        public Exam1()
         {
             InitializeComponent();
         }
