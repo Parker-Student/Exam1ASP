@@ -19,19 +19,41 @@ namespace PF.Exam1
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            double width = 0;
-            double height = 0;
-            
-            Double.TryParse(txtWidth.Text, out width);
+            //double width = 0;
+           // double height = 0;
+
+            if (Double.TryParse(txtWidth.Text, out double width) && Double.TryParse(txtWidth.Text, out double height))
+            {
+                double area = width * height;
+                double perim = (2 * width) + (2 * height);
+
+                lblArea.Text = area.ToString("0.000");
+                lblPerim.Text = perim.ToString("0.000");
+
+                txtHeight.Clear();
+                txtWidth.Clear();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Enter a Valid Number", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtHeight.Clear();
+                txtWidth.Clear();
+                txtWidth.Focus();
+            }
+
+           /* Double.TryParse(txtWidth.Text, out width);
             Double.TryParse(txtWidth.Text, out height);
             
             double area = width * height;
             double perim = (2 * width) + (2 * height);
+                                 
             lblArea.Text = area.ToString("0.000");
             lblPerim.Text = perim.ToString("0.000");
 
             txtHeight.Clear();
-            txtWidth.Clear();
+            txtWidth.Clear();*/
 
         }
 
