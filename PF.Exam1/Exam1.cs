@@ -16,13 +16,37 @@ namespace PF.Exam1
         {
             InitializeComponent();
         }
+        
+        public void RecPerimeter(double height, double width)
+        {
+            Double.TryParse(txtWidth.Text, out width);
+            Double.TryParse(txtHeight.Text, out height);
+            double perim = (2 * width) + (2 * height);
+        }
+
+        public double RecArea(double height, double width)
+        {
+            Double.TryParse(txtWidth.Text, out width);
+            Double.TryParse(txtHeight.Text, out height);
+
+            double area = width * height;
+            return area;
+        }
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            //double width = 0;
-           // double height = 0;
+            Double.TryParse(txtWidth.Text, out double width);
+            Double.TryParse(txtHeight.Text, out double height);
+            double temparea = width * height;
 
-            if (Double.TryParse(txtWidth.Text, out double width) && Double.TryParse(txtWidth.Text, out double height))
+
+            if(temparea = RecArea() { }
+            
+
+
+
+
+           /* if (Double.TryParse(txtWidth.Text, out double width) && Double.TryParse(txtWidth.Text, out double height))
             {
                 double area = width * height;
                 double perim = (2 * width) + (2 * height);
@@ -41,20 +65,7 @@ namespace PF.Exam1
                 txtHeight.Clear();
                 txtWidth.Clear();
                 txtWidth.Focus();
-            }
-
-           /* Double.TryParse(txtWidth.Text, out width);
-            Double.TryParse(txtWidth.Text, out height);
-            
-            double area = width * height;
-            double perim = (2 * width) + (2 * height);
-                                 
-            lblArea.Text = area.ToString("0.000");
-            lblPerim.Text = perim.ToString("0.000");
-
-            txtHeight.Clear();
-            txtWidth.Clear();*/
-
+            }*/
         }
 
         private void btnExit_Click(object sender, EventArgs e)
